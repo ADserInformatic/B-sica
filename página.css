@@ -118,7 +118,7 @@ flex-flow: column nowrap;/* para que quede en columnas y nowrap para que se adap
             #not1, #not2, #not3, #not4{
                 width: 100%;
                 max-height: 100%;
-                position: static; 
+                position: relative;
                 z-index: 1;
                 top: 0;
                 margin: 0px auto; 
@@ -128,7 +128,6 @@ flex-flow: column nowrap;/* para que quede en columnas y nowrap para que se adap
                 text-align: start; 
                 padding: 10px 15px; 
                 grid-column: 1/-1;
-                grid-row: 2/4;
                 box-shadow: 2px 3px 10px #000;
         
             }
@@ -213,6 +212,10 @@ flex-flow: column nowrap;/* para que quede en columnas y nowrap para que se adap
     }
     .articulo{
         max-height: 420px;
+    }
+    #not1, #not2, #not3, #not4{
+        max-height: 400px;
+        overflow-y: auto;
     }
     .articulo h2{
         font-size: 20px;
