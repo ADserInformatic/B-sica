@@ -74,7 +74,6 @@ flex-flow: column nowrap;/* para que quede en columnas y nowrap para que se adap
                 font-family: 'Lora', serif;
                 font-size: 21px;
                 color: #fff;
-                font-weight: 300px;
                 text-align: center;
                 line-height: 1.6;
             }
@@ -233,16 +232,24 @@ flex-flow: column nowrap;/* para que quede en columnas y nowrap para que se adap
 }
 @media all and (max-width: 600px){
     .principal{
-        height: 250px;
+        height: 200px;
+    }
+    .hh{
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 30;
+        background: rgba(0, 0, 0, 0.397);
+        border-radius: 30%;
+    }
+    .menú{
+        height: 50px;
+        box-sizing: border-box;
     }
     .margen-interno{
         padding: 10px 10px;
     }
     .articulo{
         font-size: 13px;
-    }
-    .principal{
-        height: 400px;
     }
     .lateral{
         flex-direction: column;
