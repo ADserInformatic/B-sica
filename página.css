@@ -1,0 +1,259 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Monserrat', sans-serif;
+    background: linear-gradient( rgba(247, 30, 131, 0.432), rgba(255, 22, 204, 0.425));
+}
+.margen-interno{
+    padding: 0 50px;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover{
+    color: #5656ff;
+}
+.padre{
+display: flex;
+flex-flow: column nowrap;/* para que quede en columnas y nowrap para que se adapte todo al tamaño de la pantalla. */
+}
+    .cabecera{
+        background: url(Imagenes/Img\ de\ cabecera.jpg);
+        background-position: center;
+        background-attachment: contain;
+        background-size: contain;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menú{
+        background: rgba(0, 0, 0, 0.1);
+        display: grid;
+        grid-auto-flow: column;
+        height: 100px;
+        place-content: center space-between;
+        border-bottom: 1px solid;
+        }
+            .logo{
+            flex: 1 1 auto;
+            display: flex;
+            }
+         .logo a{ 
+            /* text-decoration: none; */
+            /* color: #ffffff; */
+            font-size: 30px;
+        }
+        .logo a:hover{
+            color: #343434;
+        } 
+        .social{
+            flex: 1 1 auto;
+            text-decoration: none;
+            color: #ffffff;
+            display: flex;
+            }
+            .social a{
+                margin-left: 10px;
+                transition: .7s;
+            }
+            .social a:hover{
+                color: #f39;
+                transform: scale(1.1);
+            }
+        .principal{
+        /* background: #cc4444; */
+        height: 580px;
+        align-items: center;
+        display: flex;
+        }
+            .hh{
+                /* background: #ff1111; */
+                font-family: 'Lora', serif;
+                font-size: 21px;
+                color: #fff;
+                font-weight: 300px;
+                text-align: center;
+                line-height: 1.6;
+            }
+    .seccion{
+    display: flex;
+    }
+        .articulos{
+        display: flex;
+        flex: 2 1 100%;
+        flex-flow: row wrap;
+        }
+            .articulo{
+                max-height: 450px;
+                flex: 1 1 40px;
+                color: #000;
+                font-size: 13;
+                letter-spacing: 1px;
+                margin: 10px 10px 10px 0px;
+                flex: 1 1 45%;
+                background: rgba(167,135,189, .6);
+                padding: 10px;
+            }
+            .articulo:hover #art1{
+                filter: brightness(1.3);
+            }
+            .articulo a{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px 20px;
+                background: #000;
+                margin: 10px 0;
+                display: inline-block;
+                cursor: pointer;
+            }
+            .articulo a:hover{
+                background: #625262
+            }
+            .articulo img{
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            #not1, #not2, #not3, #not4{
+                width: 100%;
+                max-height: 100%;
+                position: static; 
+                z-index: 1;
+                top: 0;
+                margin: 0px auto; 
+                background: rgb(255, 252, 255); 
+                display: none; 
+                overflow: auto; 
+                text-align: start; 
+                padding: 10px 15px; 
+                grid-column: 1/-1;
+                grid-row: 2/4;
+                box-shadow: 2px 3px 10px #000;
+        
+            }
+                h3{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px 0;
+                margin-top: -110px;
+            }
+            h2{
+                font-size: 25px;
+                text-transform: uppercase;
+                padding: 0px 0 10px 0px;
+                color: #fff;
+                min-height: 70px;
+            }
+            .nav2{
+            background: #050505;
+            flex: 1 1 100%;
+            margin: 10px 10px 0px 0px;;
+            }
+        .nav2 a{
+            color: #fff;
+            font-size: 11px;
+            padding: 0 10px;
+            letter-spacing: 2px;
+        }
+        .lateral{
+        /* background: #00ffff; */
+        flex: 1 1 50%;
+        margin: 10px 5px 10px 0px;
+        }
+    h4{
+        background: #000;
+        color: #fff;
+        padding: 10px;
+        text-transform: uppercase;
+    }
+            .publicidad{
+            /* background: #cc4444; */
+            display: flex;
+            flex: 1 1 40%;
+            flex-flow: column;
+            }
+        .publicidad img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    .footer{
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 20px 10px;
+    }
+        .pie{
+        /* background: #cc0505; */
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        }
+    .pie a{
+        color: #fff;
+        font-size: 11px;
+        text-transform: uppercase;
+        padding: 0 10px;
+        letter-spacing: 2px;
+        transition: all .5s;
+    }
+    .pie a:hover{
+        color: #d65eee;
+        font-size: .8em;
+    }
+@media all and (max-width: 900px){
+    .principal{
+        height: 400px;
+    }
+    .hh{
+        font-size: 16px;
+    }
+    .articulo{
+        max-height: 420px;
+    }
+    .articulo h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .seccion{
+        flex-direction: column; 
+    }
+    .menú{
+        flex-direction: row;
+        height: auto;
+    }
+    .lateral{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media all and (max-width: 600px){
+    .principal{
+        height: 250px;
+    }
+    .margen-interno{
+        padding: 10px 10px;
+    }
+    .articulo{
+        font-size: 13px;
+    }
+    .principal{
+        height: 400px;
+    }
+    .lateral{
+        flex-direction: column;
+    }
+    .nav2 a{
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 400px){
+    .articulos{
+        flex-direction: column;
+    }
+}
